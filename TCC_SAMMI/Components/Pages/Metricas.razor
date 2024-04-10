@@ -1,0 +1,65 @@
+﻿@rendermode InteractiveServer
+
+@page "/Metricas"
+
+
+<RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 420px">
+    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Start" Gap="1rem" Class="rz-p-4">
+        <RadzenStack Gap="0">
+            <RadzenText TextStyle="TextStyle.Overline" class="rz-display-flex rz-mt-2 rz-my-0">Nome</RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1"><b>@(user.nome)</b></RadzenText>
+            <RadzenText TextStyle="TextStyle.Overline" class="rz-display-flex rz-mt-4 rz-mb-0">Data</RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1"><b>@(user.datacriacao)</b></RadzenText>
+        </RadzenStack>
+    </RadzenStack>
+    <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+        <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Informações de Matematica</strong></RadzenText>
+        <RadzenRow RowGap="0">
+            <RadzenColumn SizeSM="4">
+                <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Adição</RadzenText>
+                <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light"><b>@(user.adi)</b></RadzenText>
+                <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Subtração</RadzenText>
+                <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light"><b>@(user.sub)</b></RadzenText>
+            </RadzenColumn>
+            <RadzenColumn SizeSM="8">
+                <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Divisão</RadzenText>
+                <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light"><b>@(user.div)</b></RadzenText>
+                <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Multiplcação</RadzenText>
+                <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light"><b>@(user.mul)</b></RadzenText>
+            </RadzenColumn>
+        </RadzenRow>
+    </RadzenCard>
+    <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+        <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Informações de Português</strong></RadzenText>
+        <RadzenRow RowGap="0">
+            <RadzenColumn SizeSM="4">
+                <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Silbas</RadzenText>
+                <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light"><b>@(user.silabas)</b></RadzenText>
+            </RadzenColumn>
+        </RadzenRow>
+    </RadzenCard>
+    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0">
+        <RadzenButton Variant="Variant.Text" class="rz-text-secondary-color" Text="Voltar" />
+    </RadzenStack>
+</RadzenCard>
+
+@code {
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+
+    Usuario user;
+
+    protected override void OnInitialized() // = On Page Load
+    {
+        Controller con = new Controller();
+        if (con.islogged())
+        {
+            user = con.getuser();
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+
+}

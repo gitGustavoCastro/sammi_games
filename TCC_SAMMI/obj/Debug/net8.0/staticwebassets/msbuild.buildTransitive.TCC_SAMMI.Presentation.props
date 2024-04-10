@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TCC_SAMMI.Presentation.props" />
+</Project>

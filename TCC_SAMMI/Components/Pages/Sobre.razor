@@ -1,0 +1,31 @@
+﻿@rendermode InteractiveServer
+
+@page "/Sobre"
+
+<RadzenStack AlignItems="AlignItems.Center" Class="rz-l-12">
+    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem">
+        <RadzenLabel Text="Saiba um puco mais sobre nós!" Style="font-size: 28px;margin-bottom: 30px;" />
+    </RadzenStack>
+
+    <RadzenAccordion Style="width: 50%">
+        <Items>
+            <RadzenAccordionItem Text="Quem somos" Icon="group" CollapseTitle="Nossa historia.">
+                Somos um grupo de estudantes atualemnte no tercero semestre do curso de desenvolvimento de sistemas da ETEC de Matão - SP.
+            </RadzenAccordionItem>
+            <RadzenAccordionItem Text="Missão" Icon="account_box" CollapseTitle="Nossa Missão.">
+                Entendemos como a nossa missão a dificil tarefa de facilitar a vida de estudantes do ensino fundamental.
+            </RadzenAccordionItem>
+            <RadzenAccordionItem Text="Visão" Icon="visibility" CollapseTitle="Nossa Visão.">
+                Acreditamos que com a adesão desse projeto a qualidade de ensino poderá ter uma significativa melhora, tanto para os alunos quanto para os professores.
+            </RadzenAccordionItem>
+            <RadzenAccordionItem Text="Valores" Icon="accessibility" CollapseTitle="Nossos valores.">
+                Para alcançar nossos objetivos seguimos com nossos principios, de sempre nos basear em honestidade, transparência e competência.
+            </RadzenAccordionItem>
+        </Items>
+    </RadzenAccordion>
+
+</RadzenStack>
+
+@code {
+
+}

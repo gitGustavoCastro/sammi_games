@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\tcc - mysql - swagger\\TCC\\TCC_SAMMI\\TCC_SAMMI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TCC_SAMMI.Presentation.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TCC_SAMMI.Presentation.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\tcc - mysql - swagger\\TCC\\TCC_SAMMI\\TCC_SAMMI\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\tcc - mysql - swagger\\TCC\\TCC_SAMMI\\TCC_SAMMI\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\tcc - mysql - swagger\\TCC\\TCC_SAMMI\\TCC_SAMMI\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\tcc - mysql - swagger\\TCC\\TCC_SAMMI\\TCC_SAMMI\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TCC_SAMMI.Presentation.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TCC_SAMMI.Presentation.props",
+      "PackagePath": "build\\TCC_SAMMI.Presentation.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TCC_SAMMI.Presentation.props",
+      "PackagePath": "buildMultiTargeting\\TCC_SAMMI.Presentation.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TCC_SAMMI.Presentation.props",
+      "PackagePath": "buildTransitive\\TCC_SAMMI.Presentation.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

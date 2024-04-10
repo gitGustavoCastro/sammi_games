@@ -1,0 +1,142 @@
+﻿@using System.Text.RegularExpressions
+@using Newtonsoft.Json
+
+@rendermode InteractiveServer
+@page "/Cadastro"
+
+<RadzenCard class="rz-my-12 rz-mx-auto rz-p-4 rz-p-md-12" style="max-width: 600px;">
+    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.End" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap" Gap="1rem" Class="rz-p-sm-12">
+        <RadzenFormField Text="Usuario" Variant="@variant">
+            <ChildContent>
+                <RadzenTextBox @bind-Value="@user" />
+            </ChildContent>
+            <End>
+                <RadzenIcon Icon="account_circle" />
+            </End>
+        </RadzenFormField>
+        <RadzenFormField Text="E-mail" Variant="@variant">
+            <ChildContent>
+                <RadzenTextBox @bind-Value="@email" />
+            </ChildContent>
+            <End>
+                <RadzenIcon Icon="mail" />
+            </End>
+        </RadzenFormField>
+        <RadzenFormField Text="Senha" Variant="@variant">
+            <ChildContent>
+                <RadzenTextBox @bind-Value="@senha" Visible="@(!password)" />
+                <RadzenPassword @bind-Value="@senha" Visible="@password" />
+            </ChildContent>
+            <End>
+                <RadzenButton Icon="@(password ? "visibility" : "visibility_off")" Click="TogglePassword" Variant="Variant.Text" Size="ButtonSize.Small" />
+            </End>
+        </RadzenFormField>
+        <RadzenFormField Text="Conf. Senha" Variant="@variant">
+            <ChildContent>
+                <RadzenTextBox @bind-Value="@confsenha" Visible="@(!password)" />
+                <RadzenPassword @bind-Value="@confsenha" Visible="@password" />
+            </ChildContent>
+            <End>
+                <RadzenButton Icon="@(password ? "visibility" : "visibility_off")" Click="TogglePassword" Variant="Variant.Text" Size="ButtonSize.Small" />
+            </End>
+        </RadzenFormField>
+    </RadzenStack>
+    
+    @if (showalert)
+    {
+        <RadzenAlert AlertStyle="@(alerttype)" Variant="Variant.Flat" Shade="Shade.Lighter">
+            @alertmsg
+        </RadzenAlert>
+    }
+
+    <div class="rz-p-12 rz-text-align-center" style="padding: 1rem!important;">
+        <RadzenSwitch @bind-Value=@sw Change=@(args => OnChange(args, "Switch")) InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Switch value" }})" />
+        <RadzenLabel Text="Receber atualizaçoes por e-mail?" Component="CheckBox1" Style="margin-left: 8px; vertical-align: middle;" />
+    </div>
+
+    <div class="rz-p-12 rz-text-align-center" style="padding: 1rem!important;">
+        <RadzenButton Variant="Variant.Flat" Click=@(() => cadastra()) Text="Cadastrar" ButtonStyle="ButtonStyle.Primary" />
+    </div>
+
+    <div class="rz-p-12 rz-text-align-center" style="padding: 1rem!important;">
+        <RadzenLabel Path="Cadastro" Text="Já possui uma conta? Logue-se agora!" />
+    </div>
+</RadzenCard>
+
+@code {
+        AlertStyle alerttype; //Warning, Success, Info, Danger
+        Variant variant = Variant.Outlined;
+
+        bool sw;
+        bool flag;
+        bool password = true;
+        bool showalert = false;
+        string alertmsg;
+
+        string user = "";
+        string email = "";
+        string senha = "";
+        string confsenha = "";
+
+        //public  async void cadastra()
+        public async void cadastra()
+        {
+            if (this.confsenha != this.senha)
+            {
+                this.alerttype = AlertStyle.Warning;
+                this.alertmsg = "As senha devem coincidir!";
+                this.showalert = !this.showalert;
+            }
+            else if (!Regex.IsMatch(this.email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase))
+            {
+                this.alerttype = AlertStyle.Warning;
+                this.alertmsg = "Utilize um email válido!";
+                this.showalert = !this.showalert;
+            }
+            else //tudo certo, campos validados
+            {
+                this.alertmsg = "";
+
+                Usuario u = new Usuario();
+                u.nome = this.user;
+                u.email = this.email;
+                u.senha = this.senha;
+                u.adi = 0;
+                u.sub = 0;
+                u.mul = 0;
+                u.div = 0;
+                u.silabas = 0;
+                u.status = "";
+                u.datacriacao = "";
+
+                Controller con = new Controller();
+                Task<bool> result = con.AddUsuario(u);
+                bool r = await result;
+
+                if (r)
+                {
+                    alerttype = AlertStyle.Success;
+                    alertmsg = "Cadastro feito com sucesso!";
+                    showalert = !showalert;
+                }
+                else
+                {
+                    alerttype = AlertStyle.Danger;
+                    alertmsg = "Desculpe, tente novamente!";
+                    showalert = !showalert;
+                }
+
+            StateHasChanged();
+        }
+    }
+
+    void OnChange(bool a,string txt)
+    {
+        //nothing
+    }
+
+    void TogglePassword()
+    {
+        password = !password;
+    }
+}

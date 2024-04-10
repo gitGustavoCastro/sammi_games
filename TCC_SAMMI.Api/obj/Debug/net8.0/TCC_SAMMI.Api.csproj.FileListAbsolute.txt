@@ -1,0 +1,102 @@
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\appsettings.json
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.staticwebassets.runtime.json
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.exe
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.deps.json
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.runtimeconfig.json
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.pdb
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Json.Net.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Radzen.Blazor.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.AssemblyInfo.cs
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.sourcelink.json
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets\msbuild.TCC_SAMMI.Api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets\msbuild.build.TCC_SAMMI.Api.props
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TCC_SAMMI.Api.props
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TCC_SAMMI.Api.props
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\scopedcss\bundle\TCC_SAMMI.Api.styles.css
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMM.35015B4E.Up2Date
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\refint\TCC_SAMMI.Api.dll
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.pdb
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.genruntimeconfig.cache
+C:\Users\Admin\Desktop\tcc\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\ref\TCC_SAMMI.Api.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\appsettings.json
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.staticwebassets.runtime.json
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.exe
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.deps.json
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.runtimeconfig.json
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.pdb
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Json.Net.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Radzen.Blazor.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.AssemblyInfo.cs
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.sourcelink.json
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets\msbuild.TCC_SAMMI.Api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets\msbuild.build.TCC_SAMMI.Api.props
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TCC_SAMMI.Api.props
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TCC_SAMMI.Api.props
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\scopedcss\bundle\TCC_SAMMI.Api.styles.css
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMM.35015B4E.Up2Date
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\refint\TCC_SAMMI.Api.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.pdb
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.genruntimeconfig.cache
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\ref\TCC_SAMMI.Api.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\TCC_SAMMI.Api.xml
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\obj\Debug\net8.0\TCC_SAMMI.Api.xml
+C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI.Api\bin\Debug\net8.0\Dapper.dll

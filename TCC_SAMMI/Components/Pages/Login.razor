@@ -1,0 +1,92 @@
+﻿@using Newtonsoft.Json
+@rendermode InteractiveServer
+@page "/Login"
+
+<RadzenCard class="rz-my-12 rz-mx-auto rz-p-4 rz-p-md-12" style="max-width: 600px;">
+    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.End" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.Wrap" Gap="1rem" Class="rz-p-sm-12">
+        <RadzenFormField Text="Usuario" Variant="Variant.Outlined">
+            <ChildContent>
+                <RadzenTextBox @bind-Value="@value" />
+            </ChildContent>
+            <End>
+                <RadzenIcon Icon="account_circle" />
+            </End>
+        </RadzenFormField>
+        <RadzenFormField Text="Senha" Variant="Variant.Outlined">
+            <ChildContent>
+                <RadzenTextBox @bind-Value="@passwordValue" Visible="@(!password)" />
+                <RadzenPassword @bind-Value="@passwordValue" Visible="@password" />
+            </ChildContent>
+            <End>
+                <RadzenButton Icon="@(password ? "visibility" : "visibility_off")" Click="TogglePassword" Variant="Variant.Text" Size="ButtonSize.Small" />
+            </End>
+        </RadzenFormField>
+
+    </RadzenStack>
+
+    @if (showalert)
+    {
+        <RadzenAlert AlertStyle="@(alerttype)" Variant="Variant.Flat" Shade="Shade.Lighter">
+            @alertmsg
+        </RadzenAlert>
+    }
+
+    <div class="rz-p-12 rz-text-align-center" style="padding: 1rem!important;">
+        <RadzenSwitch @bind-Value=@sw Change=@(args => OnChange(args, "Switch")) InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Switch value" }})" />
+        <RadzenLabel Text="Me manenha logado" Component="CheckBox1" Style="margin-left: 8px; vertical-align: middle;" />
+    </div>
+
+    <div class="rz-p-12 rz-text-align-center" style="padding: 1rem!important;">
+        <RadzenButton Variant="Variant.Flat" Click=@(() => logar()) Text="Logar" ButtonStyle="ButtonStyle.Primary" />
+    </div>
+
+    <div class="rz-p-12 rz-text-align-center" style="padding: 1rem!important;">
+        <RadzenLabel Path="Login" Text="Aida não possui uma conta? Cadastre-se agora!" />
+    </div>
+</RadzenCard>
+
+@code {
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+
+    bool sw;
+    bool flag;
+    string value = "";
+    string passwordValue = "";
+    bool password = true;
+    bool showalert = false;
+    string alertmsg;
+    AlertStyle alerttype; //Warning, Success, Info, Danger
+
+    public async void logar()
+    {
+        Controller con = new Controller();
+        Usuario user = await con.GetUsuariobyNome(this.value);
+
+        if (user.nome == this.value && user.senha == this.passwordValue)
+        {
+            con.logar(user);
+
+            this.alerttype = AlertStyle.Success;
+            this.alertmsg = "Bem-vindo(a) " + user.nome;
+            this.showalert = !this.showalert;
+
+            NavigationManager.NavigateTo("/");
+        }
+        else{
+            this.alerttype = AlertStyle.Danger;
+            this.alertmsg = "Login ou senha invalida";
+            this.showalert = !this.showalert;
+        }
+    }
+
+    void OnChange(bool a, string txt)
+    {
+        //nothing
+    }
+
+    void TogglePassword()
+    {
+        password = !password;
+    }
+}

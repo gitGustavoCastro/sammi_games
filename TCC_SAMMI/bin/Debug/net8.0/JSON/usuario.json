@@ -1,0 +1,12 @@
+{
+  "nome": null,
+  "email": null,
+  "senha": null,
+  "datacriacao": null,
+  "status": null,
+  "silabas": 0,
+  "adi": 0,
+  "sub": 0,
+  "mul": 0,
+  "div": 0
+}

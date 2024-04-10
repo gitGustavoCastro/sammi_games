@@ -1,0 +1,231 @@
+﻿@using System.Text.RegularExpressions;
+@inject IJSRuntime JSRuntime
+
+@rendermode InteractiveServer
+
+@page "/Portugues/{operacao}"
+
+<RadzenCard class="rz-my-12 rz-mx-auto rz-p-4 rz-p-md-12" style="max-width: 600px;">
+
+    <div class="rz-p-12 rz-text-align-center" style="font-size: 20px;padding: 1rem!important;">
+        <RadzenLabel Text="@(questao)" Style="margin-left: 8px; vertical-align: middle;" />
+    </div>
+
+    @if (!string.IsNullOrEmpty(msg))
+    {
+        <div class="rz-p-12 rz-text-align-center" style="font-size: 16px;padding: 1rem!important;">
+            <RadzenLabel Text="@(msg)" Style="margin-left: 8px; vertical-align: middle;" />
+        </div>
+    }
+
+    <div class="rz-p-12 rz-text-align-center" style="padding: 1rem!important;">
+        @foreach (var button in buttons)
+        {
+            <RadzenButton @key="button.Id" Text="@Convert.ToString(button.alternativa)" Click="@(() => OnButtonClick(button))" Style="@button.Style" />
+        }
+    </div>
+
+    <div class="rz-p-12 rz-text-align-center" style="margin: 2rem -2rem -2rem -2rem;">
+        <RadzenButton Variant="Variant.Flat" Click=@(() => voltar()) Style="margin-right: 240px" Text="Voltar" ButtonStyle="ButtonStyle.Primary" />
+        <RadzenButton Variant="Variant.Flat" Click=@(() => setquestion()) Text="Proxima" ButtonStyle="ButtonStyle.Primary" />
+    </div>
+
+</RadzenCard>
+
+@code {
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+
+    [Parameter]
+    public string operacao { get; set; }
+
+    public int contador;
+    public string questao;
+    public string msg;
+    public int alternativa;
+    public string resposta;
+    public string[] alfabeto = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m","n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}; 
+    public string[] vogais = { "a", "e", "i", "o", "u" };
+    public string[] palavras = {
+                                    "cachorro", "gato", "casa", "amigo", "sol", "lua", "carro", "moto", "bicicleta", "avião",
+                                    "banana", "maçã", "laranja", "abacaxi", "uva", "melancia", "melão", "morango", "limão", "abacate",
+                                    "água", "fogo", "terra", "ar", "vento", "chuva", "neve", "floresta", "praia", "montanha",
+                                    "amor", "ódio", "felicidade", "tristeza", "alegria", "dor", "vida", "morte", "sonho", "realidade",
+                                    "escola", "trabalho", "família", "amor", "dinheiro", "tempo", "esporte", "música", "arte", "cultura"};
+    public string[] especiesDeAnimais = {
+                                    "Leão", "Tigre", "Elefante", "Girafa", "Hipopótamo", "Zebra", "Rinoceronte", "Crocodilo", "Gorila", "Urso",
+                                    "Leopardo", "Chita", "Lobo", "Raposa", "Coelho", "Esquilo", "Panda", "Pinguim", "Golfinho", "Baleia",
+                                    "Águia", "Falcão", "Coruja", "Pássaro", "Tucano", "Flamingo", "Gavião", "Gaivota", "Andorinha"};
+    public string[] frutas = {
+                                    "Maçã", "Banana", "Laranja", "Abacaxi", "Uva", "Morango", "Melancia", "Melão", "Pera", "Kiwi",
+                                    "Pêssego", "Manga", "Limão", "Cereja", "Abacate", "Framboesa", "Ameixa", "Carambola", "Tangerina", "Jabuticaba",
+                                    "Caqui", "Mirtilo", "Pitaya", "Maracujá", "Caju", "Goiaba", "Pêssego", "Amora", "Figo", "Papaya"};
+    public string[] paises = {
+                                    "Afeganistão", "Albânia", "Argélia", "Argentina", "Austrália", "Áustria", "Bangladesh", "Brasil", "Canadá", "China",
+                                    "Colômbia", "Dinamarca", "Egito", "Espanha", "Estados Unidos", "França", "Índia", "Indonésia", "Itália", "Japão",
+                                    "México", "Nigéria", "Paquistão", "Portugal", "Rússia", "Reino Unido", "Suécia", "Tailândia", "Turquia", "Vietnã"};
+
+    List<string[]> listaDePalavras = new List<string[]>
+        {
+            new string[] { "bi", "ci", "cle", "ta" },
+            new string[] { "com", "pu", "ta", "dor" },
+            new string[] { "es", "tru", "tu", "ra" },
+            new string[] { "an", "te", "ri", "or" },
+            new string[] { "re", "vo", "lu", "ção" },
+            new string[] { "ma", "ci", "nha" },
+            new string[] { "pa", "la", "vra" },
+            new string[] { "ex", "pe", "di", "en", "te" },
+            new string[] { "li", "nha", "gem" },
+            new string[] { "pe", "ri", "fé", "ri", "co" },
+            new string[] { "ci", "en", "ti", "fí", "co" },
+            new string[] { "te", "o", "ria" },
+            new string[] { "con", "si", "de", "ra", "ção" },
+            new string[] { "re", "cu", "pe", "ra", "ção" },
+            new string[] { "ob", "ser", "va", "ção" },
+            new string[] { "ad", "mi", "nis", "tra", "ção" },
+            new string[] { "fi", "gu", "ra" },
+            new string[] { "ve", "lo", "ci", "da", "de" },
+            new string[] { "cha", "ve" },
+            new string[] { "pa", "ra", "le", "le","pi", "pe", "do" },
+            new string[] { "pe", "ri", "go" },
+            new string[] { "em", "ba", "ra", "ça", "do" },
+            new string[] { "di", "fi", "cul", "da", "de" },
+            new string[] { "ra", "zão" },
+            new string[] { "de", "fi", "ni", "ção" },
+            new string[] { "me", "di", "ci", "na" },
+            new string[] { "fi", "lo", "so", "fia" },
+            new string[] { "bi", "o", "lo", "gia" },
+            new string[] { "au", "to", "mó", "vel" },
+            new string[] { "co", "ne", "xão" },
+            new string[] { "re", "pa", "ra", "ção" },
+            new string[] { "bo", "ni", "fi", "ca", "ção" },
+            new string[] { "in", "ven", "ção" },
+            new string[] { "con", "ver", "sa" },
+            new string[] { "ca", "ri", "nho" },
+            new string[] { "ri", "ca" },
+            new string[] { "po", "e", "ma" },
+            new string[] { "ja", "ne", "la" }, //
+            new string[] { "de", "sen", "vol", "vi", "men", "to" },
+            new string[] { "a", "bra", "ça", "dei", "ra" },
+            new string[] { "in", "di", "vi", "du", "a", "li", "za", "ção" },
+            new string[] { "re", "co", "nhe", "ci", "men", "to" },
+            new string[] { "co", "nhe", "ci", "men", "to" },
+            new string[] { "es", "tu", "da", "do" },
+            new string[] { "ma", "ne", "jo" },
+            new string[] { "pla", "ne", "ja", "men", "to" },
+            new string[] { "pro", "ces", "so" },
+            new string[] { "ge", "ren", "ci", "a", "men", "to" },
+            new string[] { "in", "ter", "pre", "ta", "ção" },
+            new string[] { "re", "so", "lu", "ção" },
+            new string[] { "pro", "ble", "ma" },
+            new string[] { "fi", "nan", "cei", "ro" },
+            new string[] { "con", "si", "de", "ra", "ção" },
+            new string[] { "pro", "je", "to" },
+            new string[] { "es", "co", "la" },
+            new string[] { "co", "le", "ga" },
+            new string[] { "tra", "ba", "lho" },
+            new string[] { "do", "cu", "men", "to" },
+            new string[] { "co", "nhe", "ci", "men", "to" },
+            new string[] { "se", "gu", "ran", "ça" },
+            new string[] { "in", "ter", "na", "ci", "o", "nal" },
+            new string[] { "co", "or", "de", "na", "ção" }
+
+        };
+
+    static Random rnd = new Random();
+
+    public class ButtonModel
+    {
+        public int Id { get; set; }
+        public string alternativa { get; set; }
+        public string Style { get; set; }
+    }
+
+    public List<ButtonModel> buttons = new List<ButtonModel> { };
+
+    public void setquestion()
+    {
+        switch (operacao)
+        {
+            case "silabas": 
+                buttons = new List<ButtonModel> { };
+                questao = "";
+                msg = "";
+
+                string[] silabas = listaDePalavras[rnd.Next(0, listaDePalavras.Count())];
+
+                for (int c = 0; c < silabas.Count(); c++)
+                {
+                    if (c == alternativa)
+                    {
+                        resposta = silabas[c];
+                        questao += " __ ";
+                    }
+                    else
+                    {
+                        questao += silabas[c] + " ";
+                    }
+                }
+
+                for (int c = 0; c < 4; c++)
+                {
+                    string silabaaleatoria = alfabeto[rnd.Next(1, alfabeto.Count())] + vogais[rnd.Next(1, vogais.Count())];
+                    buttons.Add(new ButtonModel { Id = c, alternativa = silabaaleatoria, Style = "" });
+                }
+
+                buttons[rnd.Next(0, 4)].alternativa = resposta;
+            break;
+            case "animais": ; break;
+            case "paises": ; break;
+            case "frutas": ; break;
+        }
+    }
+
+    private async Task consolelog(string message)
+    {
+        await JSRuntime.InvokeVoidAsync("console.log", message);
+    }
+
+    private void OnButtonClick(ButtonModel clickedButton)
+    {
+        if (clickedButton.alternativa == resposta)
+        {
+            contador++;
+            msg = contador >= 3 ? "Parabens! essa é a " + contador + " consecutiva!" : "Parabéns!";
+            clickedButton.Style = "background-color: green; color: white;";
+
+            /*Controller con = new Controller();
+            Usuario user = con.getuser();
+            UserPortugues newpor = user.portugues;
+
+            switch (operacao)
+            {
+                case "silabas": newpor.silabas++; break;
+                case "frutas": newpor.frutas++; break;
+                case "paises": newpor.paises++; break;
+                case "animais": newpor.animais++; break;
+            }
+
+            if (con.islogged()) // if a user is logged, update his math status
+            {
+                con.upadateuserportugues(newpor);
+            }*/
+        }
+        else
+        {
+            contador = 0;
+            msg = "Tente novamente!";
+            clickedButton.Style = "background-color: red; color: white;";
+        }
+    }
+
+    public void voltar()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+    protected override void OnInitialized() // = On Page Load
+    {
+        setquestion();
+    }
+}

@@ -1,0 +1,51 @@
+﻿@rendermode InteractiveServer
+@page "/"
+
+<RadzenStack AlignItems="AlignItems.Center" Class="rz-p-12" Style="margin-top: -1.5rem;">
+    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem">
+        <RadzenLabel Text="Escolha um tópico para jogar!" Style="font-size: 28px;margin-bottom: 30px;" />
+    </RadzenStack>
+
+    <RadzenPanelMenu Click="OnParentClicked" Style="width:600px;font-size: 22px;" Multiple="@multiple">
+        <RadzenPanelMenuItem Text="Matemática" Icon="calculate">
+            <RadzenPanelMenuItem Text="Adição" Path="Matematica/adi" Icon="add"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Subtração" Path="Matematica/sub" Icon="remove"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Multiplicação" Path="Matematica/mul" Icon="close"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Divisão " Path="Matematica/div" Icon="percent"></RadzenPanelMenuItem>
+        </RadzenPanelMenuItem>
+        <RadzenPanelMenuItem Text="Português" Icon="sort_by_alpha">
+            <RadzenPanelMenuItem Text="Silabas" Path="/Portugues/silabas" Icon="sd"></RadzenPanelMenuItem>
+            @*
+            <RadzenPanelMenuItem Text="Encontre os animais" Path="/Portugues/animais" Icon="pets"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Encontre os paises" Path="/Portugues/paises" Icon="flag"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Encontre as frutas" Path="/Portugues/frutas" Icon="apple"></RadzenPanelMenuItem>
+            *@
+        </RadzenPanelMenuItem>
+        @*
+        <RadzenPanelMenuItem Text="Ciências" Icon="science">
+            <RadzenPanelMenuItem Text="Física" Path="" Icon="language"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Quimica" Path="" Icon="science"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Biologia" Path="" Icon="biotech"></RadzenPanelMenuItem>
+        </RadzenPanelMenuItem>
+        <RadzenPanelMenuItem Text="Historia" Icon="book">
+            <RadzenPanelMenuItem Text="Historia Brasileira" Path="" Icon="flag"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Historia Mundial" Path="" Icon="flag"></RadzenPanelMenuItem>
+        </RadzenPanelMenuItem>
+        *@
+    </RadzenPanelMenu>
+
+</RadzenStack>
+
+@code{
+    bool multiple = false;
+
+    void OnParentClicked(MenuItemEventArgs args)
+    {
+        //console.Log($"{args.Text} clicked from parent");
+    }
+
+    void OnChildClicked(MenuItemEventArgs args)
+    {
+        //console.Log($"{args.Text} from child clicked");
+    }
+}

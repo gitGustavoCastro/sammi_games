@@ -1,0 +1,169 @@
+﻿@rendermode InteractiveServer
+
+@page "/Matematica/{operacao}"
+
+<RadzenCard class="rz-my-12 rz-mx-auto rz-p-4 rz-p-md-12" style="max-width: 600px;">
+
+    <div class="rz-p-12 rz-text-align-center" style="font-size: 20px;padding: 1rem!important;">
+        <RadzenLabel Text="@(questao)" Style="margin-left: 8px; vertical-align: middle;" />
+    </div>
+
+    @if (!string.IsNullOrEmpty(msg))
+    {
+        <div class="rz-p-12 rz-text-align-center" style="font-size: 16px;padding: 1rem!important;">
+            <RadzenLabel Text="@(msg)" Style="margin-left: 8px; vertical-align: middle;" />
+        </div>
+    }
+
+    <div class="rz-p-12 rz-text-align-center" style="padding: 1rem!important;">
+        @foreach (var button in buttons)
+        {
+            <RadzenButton @key="button.Id" Text="@Convert.ToString(button.alternativa)" Click="@(() => OnButtonClick(button))" Style="@button.Style" />
+        }
+    </div>
+
+    <div class="rz-p-12 rz-text-align-center" style="margin: 2rem -2rem -2rem -2rem;">
+        <RadzenButton Variant="Variant.Flat" Click=@(() => voltar()) Style="margin-right: 240px" Text="Voltar" ButtonStyle="ButtonStyle.Primary" />
+        <RadzenButton Variant="Variant.Flat" Click=@(() => setquestion()) Text="Proxima" ButtonStyle="ButtonStyle.Primary" />
+    </div>
+
+</RadzenCard>
+
+@code {
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+
+    [Parameter]
+    public string operacao { get; set; }
+
+    public string questao;
+    public string msg;
+    public int resposta;
+    public int contador = 0;
+
+    static Random rnd = new Random();
+
+    private class ButtonModel
+    {
+        public int Id { get; set; }
+        public int alternativa { get; set; }
+        public string Style { get; set; }
+    }
+
+    private List<ButtonModel> buttons = new List<ButtonModel>{};
+
+    private void OnButtonClick(ButtonModel clickedButton)
+    {
+        if (clickedButton.alternativa == resposta)
+        {
+            contador++;
+            msg = contador >= 3 ? "Parabens! essa é a "+contador+" consecutiva!" : "Parabéns!";
+            clickedButton.Style = "background-color: green; color: white;";
+
+            Controller con = new Controller();
+            Usuario user = con.getuser();
+
+            //verify if has an user logged
+            if (!string.IsNullOrEmpty(user.nome))
+            {
+                Usuario newuser = user;
+
+                switch (operacao)
+                {
+                    case "adi": newuser.adi++; break;
+                    case "sub": newuser.sub++; break;
+                    case "mul": newuser.mul++; break;
+                    case "div": newuser.div++; break;
+                }
+
+                con.EditaUsuario(user.email, newuser);
+            }
+
+            /*Controller con = new Controller();
+            Usuario user = con.getuser();
+            UserMatematica newmatematica = user.matematica;
+
+            switch (operacao)
+            {
+                case "adi": newmatematica.adi++; break;
+                case "sub": newmatematica.sub++; break;
+                case "mul": newmatematica.mul++; break;
+                case "div": newmatematica.div++; break;
+            }
+
+            if (con.islogged()) // if a user is logged, update his math status
+            {
+                con.upadateusermatematica(newmatematica);
+            }*/
+        }
+        else
+        {
+            contador = 0;
+            msg = "Tente novamente!";
+            clickedButton.Style = "background-color: red; color: white;";
+        }
+    }
+
+    void setquestion()
+    {
+        msg = "";
+        int prinumero = rnd.Next(1, 25);
+        int segnumero = rnd.Next(1, 25);
+
+        switch (operacao)
+        {
+            case "adi":
+                questao = prinumero + " + " + segnumero +" = __";
+                resposta = prinumero + segnumero;
+                break;
+            case "sub":
+                if (prinumero > segnumero)
+                {
+                    questao = prinumero + " - " + segnumero + " = __";
+                    resposta = prinumero - segnumero;
+                }
+                else
+                {
+                    questao = segnumero + " - " + prinumero + " = __";
+                    resposta = segnumero - prinumero;
+                }
+                break;
+            case "mul":
+                prinumero = rnd.Next(1, 11);
+                segnumero = rnd.Next(1, 11);
+
+                questao = prinumero + " X " + segnumero + " = __";
+                resposta = prinumero * segnumero;
+                break;
+            case "div":
+                prinumero = rnd.Next(2, 11);
+                segnumero = rnd.Next(2, 11);
+                int r = prinumero * segnumero;
+
+                questao = r + " / " + prinumero + " = __";
+                resposta = segnumero;
+                break;
+        }
+
+        buttons = new List<ButtonModel>
+        {
+            new ButtonModel { Id = 1, alternativa = resposta + rnd.Next(1, 11), Style = "" },
+            new ButtonModel { Id = 2, alternativa = resposta - rnd.Next(1, 11), Style = "" },
+            new ButtonModel { Id = 3, alternativa = resposta + rnd.Next(1, 11), Style = "" },
+            new ButtonModel { Id = 4, alternativa = resposta - rnd.Next(1, 11), Style = "" }
+        };
+
+        buttons[rnd.Next(0, 4)].alternativa = resposta;
+    }
+
+    protected override void OnInitialized() // = On Page Load
+    {
+        setquestion();
+    }
+
+    public void voltar()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+}

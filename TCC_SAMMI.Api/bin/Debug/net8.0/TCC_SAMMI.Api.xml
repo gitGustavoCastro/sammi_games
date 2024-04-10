@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TCC_SAMMI.Api</name>
+    </assembly>
+    <members>
+        <member name="M:TCC_SAMMI.Api.Controllers.UsuarioController.returnUsuarios">
+            <summary>Retorna uma lista com todos os usuarios cadastrados</summary>
+            <remarks>Faça uma consulta diretamente no banco de dados!!</remarks>
+        </member>
+        <member name="M:TCC_SAMMI.Api.Controllers.UsuarioController.returnUsuario(System.Int32)">
+            <summary>Retorna um unico usuario baseado em seu ID</summary>
+            <remarks>Faça uma consulta especifica diretamente no banco de dados!!</remarks>
+            <example>5</example>
+        </member>
+        <member name="M:TCC_SAMMI.Api.Controllers.UsuarioController.returnUsuariobyNome(System.String)">
+            <summary>Retorna um unico usuario baseado em seu Nome</summary>
+            <remarks>Faça uma consulta especifica diretamente no banco de dados!!</remarks>
+            <example>Teste</example>
+        </member>
+        <member name="M:TCC_SAMMI.Api.Controllers.UsuarioController.addUsuario(TCC_SAMMI.Api.Usuario)">
+            <summary>Cadastra um novo usuario</summary>
+            <remarks>Faça uma inserção diretamente no banco de dados!</remarks>
+            <response code="200">OK!</response>
+            <response code="201">Usuario criado com sucesso!</response>
+            <example>5</example>
+        </member>
+        <member name="M:TCC_SAMMI.Api.Controllers.UsuarioController.updateUsuario(System.String,TCC_SAMMI.Api.Usuario)">
+            <summary>Edite um usuario baseado em eu ID</summary>
+            <remarks>Faça uma edição diretamente no banco de dados!!</remarks>
+            <example>10</example>
+        </member>
+        <member name="M:TCC_SAMMI.Api.Controllers.UsuarioController.deleteUsuario(System.Int32)">
+            <summary>Remova um usuario baseado em seu ID</summary>
+            <remarks>Faça uma exclusão diretamente no banco de dados!!</remarks>
+            <example>10</example>
+        </member>
+    </members>
+</doc>

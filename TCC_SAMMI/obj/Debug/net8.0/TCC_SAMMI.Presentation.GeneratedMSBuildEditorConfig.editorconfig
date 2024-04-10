@@ -1,0 +1,71 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TCC_SAMMI.Presentation
+build_property.RootNamespace = TCC_SAMMI.Presentation
+build_property.ProjectDir = C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Admin\Desktop\tcc - mysql - swagger\TCC\TCC_SAMMI\TCC_SAMMI
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Pages/Cadastro.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYWRhc3Ryby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Pages/Matematica.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYXRlbWF0aWNhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Pages/Metricas.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZXRyaWNhcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Pages/Portugues.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQb3J0dWd1ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Pages/Sobre.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTb2JyZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-qzh73hdxac
+
+[C:/Users/Admin/Desktop/tcc - mysql - swagger/TCC/TCC_SAMMI/TCC_SAMMI/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-giv2t1oc9c
