@@ -19,7 +19,7 @@ public class UsuarioService : IUsuarioService
 {
     private readonly IConfiguration _config;
     //private readonly string connectionString = "Server=localhost:3306;Database=sammi_games;Uid=root;Pwd='';";
-    private IDbConnection conn = new MySqlConnection("Server=localhost;Database=sammi_games;Uid=root;Pwd='';");
+    private IDbConnection conn = new MySqlConnection("Server=mysql.tccnapratica.com.br;Database=tccnapratica03;Uid=tccnapratica03;Pwd=Ms478t;");
     public UsuarioService(IConfiguration config)
     {
         _config = config;
